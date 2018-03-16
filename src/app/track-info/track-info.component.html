@@ -1,0 +1,14 @@
+<mat-card>
+  <button mat-icon-button *ngIf='inFavorites; else addToFavorites' (click)='toggleFavorite()'>
+    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+  </button>
+  <ng-template #addToFavorites>
+    <button mat-icon-button (click)='toggleFavorite()'>
+      <mat-icon>favorite_border</mat-icon>
+    </button>
+  </ng-template>
+  <div class='trackContainer'>
+    <div>{{ track.name }}</div>
+    <div>{{ track.url }}</div>
+  </div>
+</mat-card>

@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
+  MatCardModule,
   MatInputModule,
   MatSelectModule,
-  MatCardModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +18,7 @@ import { TrackListComponent } from './track-list/track-list.component';
 import { FavoriteListComponent } from './favorite-list/favorite-list.component';
 import { FilterFormComponent } from './filter-form/filter-form.component';
 import { FormsModule } from '@angular/forms';
+import { TrackInfoComponent } from './track-info/track-info.component';
 
 
 @NgModule({
@@ -22,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     TrackListComponent,
     FavoriteListComponent,
-    FilterFormComponent
+    FilterFormComponent,
+    TrackInfoComponent
   ],
   imports: [
     FormsModule,
@@ -30,9 +35,12 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
 
     BrowserAnimationsModule,
+    MatIconModule,
     MatCardModule,
     MatInputModule,
+    MatButtonModule,
     MatSelectModule,
+    MatToolbarModule,
 
     CoreModule,
   ],

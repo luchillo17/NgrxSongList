@@ -1,0 +1,18 @@
+:host {
+  > * {
+    padding: 10px;
+  }
+}
+
+.trackListsContainer {
+  display: flex;
+  padding-top: 0;
+  justify-content: center;
+
+  :nth-child(1) {
+    margin-right: 5px;
+  }
+  :nth-child(2) {
+    margin-left: 5px;
+  }
+}
