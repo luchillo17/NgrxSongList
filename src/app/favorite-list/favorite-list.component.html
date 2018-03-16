@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-card-title>Favorites</mat-card-title>
+  <app-track-info
+    *ngFor='let track of favoriteTracks$ | async'
+    [track]='track'
+    [inFavorites]='true'
+  ></app-track-info>
+</mat-card>

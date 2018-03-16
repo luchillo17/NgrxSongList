@@ -5,8 +5,8 @@ import { FavoritesActions, FavoritesActionTypes } from './favorites.actions';
 @Injectable()
 export class FavoritesEffects {
 
-  @Effect()
-  effect$ = this.actions$.ofType(FavoritesActionTypes.Add);
+  // @Effect()
+  // effect$ = this.actions$.ofType(FavoritesActionTypes.Add);
 
   constructor(private actions$: Actions) {}
 }

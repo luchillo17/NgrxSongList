@@ -17,6 +17,18 @@ export function reducer(state = initialState, action: FilterActions): Filter {
     case FilterActionTypes.Update:
       return action.filter;
 
+    case FilterActionTypes.setValue:
+      return {
+        ...state,
+        value: action.value,
+      };
+
+    case FilterActionTypes.setField:
+      return {
+        ...state,
+        filterBy: action.filterBy,
+      };
+
     default:
       return state;
   }

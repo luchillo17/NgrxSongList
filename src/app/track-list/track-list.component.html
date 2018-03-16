@@ -1,0 +1,4 @@
+<mat-card>
+  <mat-card-title>Tracks</mat-card-title>
+  <app-track-info [track]='track' *ngFor='let track of tracks$ | async'></app-track-info>
+</mat-card>

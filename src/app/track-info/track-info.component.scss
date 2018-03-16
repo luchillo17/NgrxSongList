@@ -1,0 +1,17 @@
+$icon-size: calc(24px + 10px);
+
+:host{
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+mat-card {
+  display: flex;
+
+  .trackContainer {
+    padding: 2px 0;
+  }
+}
