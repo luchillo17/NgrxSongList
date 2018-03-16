@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from '.';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+import { reducers, metaReducers } from '.';
 import { environment } from '../../environments/environment';
 import * as fromTracks from './tracks/tracks.reducer';
-import { EffectsModule } from '@ngrx/effects';
 import { TracksEffects } from './tracks/tracks.effects';
 import * as fromFavorites from './favorites/favorites.reducer';
 import { FavoritesEffects } from './favorites/favorites.effects';
@@ -16,6 +17,7 @@ import { FilterEffects } from './filter/filter.effects';
   imports: [
     CommonModule,
     StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreModule.forFeature('tracks', fromTracks.reducer),
     StoreModule.forFeature('filter', fromFilter.reducer),
