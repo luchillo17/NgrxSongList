@@ -1,11 +1,20 @@
 import { Action } from '@ngrx/store';
 
 export enum FavoritesActionTypes {
-  FavoritesAction = '[Favorites] Action'
+  Add = '[Favorites] Add',
+  Remove = '[Favorites] Remove',
 }
 
-export class Favorites implements Action {
-  readonly type = FavoritesActionTypes.FavoritesAction;
+export class AddFavorites implements Action {
+  readonly type = FavoritesActionTypes.Add;
+  constructor(public favoriteId: string) {}
 }
 
-export type FavoritesActions = Favorites;
+export class RemoveFavorites implements Action {
+  readonly type = FavoritesActionTypes.Remove;
+  constructor(public favoriteId: string) {}
+}
+
+export type FavoritesActions =
+  AddFavorites |
+  RemoveFavorites;

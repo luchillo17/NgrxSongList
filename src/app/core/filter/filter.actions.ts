@@ -1,11 +1,13 @@
 import { Action } from '@ngrx/store';
+import { Filter } from './filter.interfaces';
 
 export enum FilterActionTypes {
-  FilterAction = '[Filter] Action'
+  Update = '[Filter] Update'
 }
 
-export class Filter implements Action {
-  readonly type = FilterActionTypes.FilterAction;
+export class UpdateFilter implements Action {
+  readonly type = FilterActionTypes.Update;
+  constructor(public filter: Filter) {}
 }
 
-export type FilterActions = Filter;
+export type FilterActions = UpdateFilter;
