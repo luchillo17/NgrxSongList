@@ -6,7 +6,7 @@ import { FilterActions, FilterActionTypes } from './filter.actions';
 export class FilterEffects {
 
   @Effect()
-  effect$ = this.actions$.ofType(FilterActionTypes.FilterAction);
+  effect$ = this.actions$.ofType(FilterActionTypes.Update);
 
   constructor(private actions$: Actions) {}
 }

@@ -6,7 +6,7 @@ import { FavoritesActions, FavoritesActionTypes } from './favorites.actions';
 export class FavoritesEffects {
 
   @Effect()
-  effect$ = this.actions$.ofType(FavoritesActionTypes.FavoritesAction);
+  effect$ = this.actions$.ofType(FavoritesActionTypes.Add);
 
   constructor(private actions$: Actions) {}
 }
